@@ -13,6 +13,7 @@
 		A97B7A9127EDE8CF0086BE68 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97B7A7F27EDE8CC0086BE68 /* ContentView.swift */; };
 		A97B7A9227EDE8CF0086BE68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A97B7A8027EDE8CE0086BE68 /* Assets.xcassets */; };
 		A97B7A9327EDE8CF0086BE68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A97B7A8027EDE8CE0086BE68 /* Assets.xcassets */; };
+		A97B7AA027EDECBA0086BE68 /* MySwiftPackage in Frameworks */ = {isa = PBXBuildFile; productRef = A97B7A9F27EDECBA0086BE68 /* MySwiftPackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		A97B7A8527EDE8CF0086BE68 /* MySwiftPackageExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySwiftPackageExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97B7A8B27EDE8CF0086BE68 /* MySwiftPackageExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySwiftPackageExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97B7A8D27EDE8CF0086BE68 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		A97B7A9D27EDEBD60086BE68 /* MySwiftPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MySwiftPackage; path = ..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A97B7AA027EDECBA0086BE68 /* MySwiftPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +48,7 @@
 		A97B7A7827EDE8CC0086BE68 = {
 			isa = PBXGroup;
 			children = (
+				A97B7A9C27EDEBD60086BE68 /* Packages */,
 				A97B7A7D27EDE8CC0086BE68 /* Shared */,
 				A97B7A8C27EDE8CF0086BE68 /* macOS */,
 				A97B7A8627EDE8CF0086BE68 /* Products */,
@@ -78,6 +82,14 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
+		A97B7A9C27EDEBD60086BE68 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				A97B7A9D27EDEBD60086BE68 /* MySwiftPackage */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -94,6 +106,9 @@
 			dependencies = (
 			);
 			name = "MySwiftPackageExample (iOS)";
+			packageProductDependencies = (
+				A97B7A9F27EDECBA0086BE68 /* MySwiftPackage */,
+			);
 			productName = "MySwiftPackageExample (iOS)";
 			productReference = A97B7A8527EDE8CF0086BE68 /* MySwiftPackageExample.app */;
 			productType = "com.apple.product-type.application";
@@ -142,6 +157,9 @@
 				Base,
 			);
 			mainGroup = A97B7A7827EDE8CC0086BE68;
+			packageReferences = (
+				A97B7A9E27EDECBA0086BE68 /* XCRemoteSwiftPackageReference "MySwiftPackage" */,
+			);
 			productRefGroup = A97B7A8627EDE8CF0086BE68 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -452,6 +470,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A97B7A9E27EDECBA0086BE68 /* XCRemoteSwiftPackageReference "MySwiftPackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/waqarshoukat14/MySwiftPackage";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A97B7A9F27EDECBA0086BE68 /* MySwiftPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A97B7A9E27EDECBA0086BE68 /* XCRemoteSwiftPackageReference "MySwiftPackage" */;
+			productName = MySwiftPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A97B7A7927EDE8CC0086BE68 /* Project object */;
 }

@@ -10,8 +10,9 @@ import SwiftUI
 
 
 @available(iOS 13.0, *)
-struct SwiftUI: View {
-    var body: some View {
+public struct SwiftUI: View {
+    public init() {}
+    public var body: some View {
      Text("This is the MySwiftView from the package Views")
     }
 }
